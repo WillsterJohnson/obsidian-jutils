@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src/",
+    "module": "ESNext",
+    "target": "ES6",
+    "allowJs": false,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "isolatedModules": true,
+    "strictNullChecks": true,
+    "strict": true,
+    "lib": ["DOM", "ES5", "ES6", "ES7"],
+    "rootDir": "src",
+    "noEmit": true,
+    "removeComments": false
+  },
+  "include": ["src/**/*.ts"]
+}

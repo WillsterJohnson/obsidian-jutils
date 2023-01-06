@@ -1,0 +1,25 @@
+{
+  "name": "obsidian-jutils",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Monolith plugin for Obsidian containing a variety of utilities",
+  "main": "main.js",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
+    "check": "tsc",
+    "test": "check && build # TODO: how do I test when I depend on a separate app?"
+  },
+  "author": "Will 'Willster' Johnson",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.2.1",
+    "@rollup/plugin-typescript": "^10.0.1",
+    "obsidian": "latest",
+    "prettier": "^2.8.1",
+    "rollup": "^3.9.1",
+    "rollup-plugin-license": "^3.0.1",
+    "tslib": "^2.4.1",
+    "typescript": "4.7.4"
+  }
+}

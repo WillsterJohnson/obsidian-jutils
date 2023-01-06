@@ -1,0 +1,9 @@
+{
+	"id": "obsidian-jutils",
+	"name": "JUtils - The Utility Monolith",
+	"version": "0.1.0",
+	"minAppVersion": "1.1.9",
+	"description": "Monolith plugin for Obsidian containing a variety of utilities",
+	"author": "Will 'Willster' Johnson",
+	"isDesktopOnly": false
+}
