@@ -8,17 +8,17 @@ specifiers:
   rollup: ^3.9.1
   rollup-plugin-license: ^3.0.1
   tslib: ^2.4.1
-  typescript: 4.7.4
+  typescript: ^4.9.4
 
 devDependencies:
   '@rollup/plugin-terser': 0.2.1_rollup@3.9.1
-  '@rollup/plugin-typescript': 10.0.1_4ennk4vx54ulrcvl32j6wddivu
+  '@rollup/plugin-typescript': 10.0.1_hqjvco2e22ojmon3nhwchufpre
   obsidian: 1.1.1_ootph5s5ydlpya6ok6lxu3ipni
   prettier: 2.8.1
   rollup: 3.9.1
   rollup-plugin-license: 3.0.1_rollup@3.9.1
   tslib: 2.4.1
-  typescript: 4.7.4
+  typescript: 4.9.4
 
 packages:
 
@@ -86,7 +86,7 @@ packages:
       terser: 5.16.1
     dev: true
 
-  /@rollup/plugin-typescript/10.0.1_4ennk4vx54ulrcvl32j6wddivu:
+  /@rollup/plugin-typescript/10.0.1_hqjvco2e22ojmon3nhwchufpre:
     resolution: {integrity: sha512-wBykxRLlX7EzL8BmUqMqk5zpx2onnmRMSw/l9M1sVfkJvdwfxogZQVNUM9gVMJbjRLDR5H6U0OMOrlDGmIV45A==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -103,7 +103,7 @@ packages:
       resolve: 1.22.1
       rollup: 3.9.1
       tslib: 2.4.1
-      typescript: 4.7.4
+      typescript: 4.9.4
     dev: true
 
   /@rollup/pluginutils/5.0.2_rollup@3.9.1:
@@ -437,8 +437,8 @@ packages:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
     dev: true
 
-  /typescript/4.7.4:
-    resolution: {integrity: sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==}
+  /typescript/4.9.4:
+    resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
