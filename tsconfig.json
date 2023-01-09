@@ -15,5 +15,5 @@
     "noEmit": true,
     "removeComments": false
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts", "rollup.config.ts"]
 }

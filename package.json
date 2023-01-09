@@ -5,8 +5,8 @@
   "description": "Monolith plugin for Obsidian containing a variety of utilities",
   "main": "main.js",
   "scripts": {
-    "dev": "rollup -c -w",
-    "build": "rollup -c",
+    "dev": "rollup -c --configPlugin @rollup/plugin-typescript -w",
+    "build": "rollup -c --configPlugin @rollup/plugin-typescript",
     "check": "tsc",
     "test": "check && build # TODO: how do I test when I depend on a separate app?"
   },

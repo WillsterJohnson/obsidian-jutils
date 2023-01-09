@@ -1,7 +1,9 @@
 import typescript from "@rollup/plugin-typescript";
 import terser from "@rollup/plugin-terser";
 import license from "rollup-plugin-license";
-export default {
+import { defineConfig } from "rollup";
+
+export default defineConfig({
   input: "src/index.ts",
   output: {
     file: "main.js",
@@ -12,4 +14,4 @@ export default {
     terser(),
     license({ banner: { content: { file: "./LICENSE.md" } } }),
   ],
-};
+});

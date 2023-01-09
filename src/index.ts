@@ -8,7 +8,7 @@ export default class JUtils extends Plugin {
     super(app, manifest);
     this.appData = new DataJsonContract(this);
     this.appData.subscribe(debug);
-    this.addSettingTab(new JSettings(this));
+    this.addSettingTab(new JSettings(this, []));
   }
 
   public appData!: DataJsonContract;
