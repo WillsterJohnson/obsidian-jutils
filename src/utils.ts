@@ -1,7 +1,7 @@
 export const debug = (...args: Parameters<Console["log"]>) =>
   console.log(...args);
 
-export function validate<T>(
+export function validate<T extends any>(
   data: unknown,
   schema: T,
   nullable = true,
@@ -20,7 +20,7 @@ export function validate<T>(
   // case: object
   if (!nullable) {
     const dataKeys = Object.keys(data);
-    const schemaKeys = Object.keys(schema);
+    const schemaKeys = Object.keys(schema as object);
     if (dataKeys.length !== schemaKeys.length) return false;
     for (const key of dataKeys) if (!schemaKeys.includes(key)) return false;
   }

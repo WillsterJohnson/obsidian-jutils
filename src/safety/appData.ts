@@ -3,20 +3,25 @@ Adapted from Svelte's writable store
 */
 
 import type JUtils from "index.js";
-import { merge } from "utils.js";
 
 export interface SavedPluginData {
   /**
    * Stores the state of all settings forJUtils
    */
-  settingsTab: {
-    test1: boolean;
-    test2: number;
+  settings: {
+    [option: string]: boolean | number | string | undefined;
   };
 }
 
 export class DataJsonContract {
-  constructor(protected readonly plugin: JUtils) {}
+  public static async new(plugin: JUtils) {
+    const contract = new DataJsonContract(plugin);
+    contract.value = (await contract.read()) ?? {};
+    contract.value.settings ??= {};
+    return contract;
+  }
+
+  protected constructor(protected readonly plugin: JUtils) {}
 
   protected value!: SavedPluginData;
 
@@ -31,14 +36,7 @@ export class DataJsonContract {
   ][] = [];
 
   private async read(): Promise<SavedPluginData> {
-    const defaultData: SavedPluginData = {
-      settingsTab: {
-        test1: false,
-        test2: 0,
-      },
-    };
-    const data = (await this.plugin.loadData()) as Partial<SavedPluginData>;
-    return merge(defaultData, data);
+    return (await this.plugin.loadData()) as SavedPluginData;
   }
 
   private async write(): Promise<void> {
@@ -65,10 +63,11 @@ export class DataJsonContract {
    * @param updater - The function that updates the value
    */
   public async update(
-    updater: (value: SavedPluginData) => SavedPluginData,
+    updater: (value: SavedPluginData) => void,
   ): Promise<void> {
     if (!this.value) this.value = await this.read();
-    this.set(updater(this.value));
+    updater(this.value);
+    this.set(this.value);
   }
 
   /**
